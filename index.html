@@ -4,33 +4,22 @@
     <head>
         <meta charset="utf-8">
         <title>Days</title>
-        <link rel="stylesheet" href="main.css">
         <script type='text/javascript' src="jquery-3.3.1.js"></script>
         <script type='text/javascript' src="month_range.js"></script>
     </head>
     <body>
-        <div class="btn">
-		  <form>
-                <button id="b_fund">Get hours</button>
-            </form>
-        </div>
-        <div class="result" id='res'>
+        <button id="b_fund">Get hours</button>
+        
         <div id='description'>Total hours needed: </div>
             <div id='c_hours'></div>
         </div>
-        <div class="btn">
-		  <form>
-                <button id="test">test btn</button>
-            </form>
-        </div>
-        <div id='testdiv'>
-            <div id='old'>Div content</div>
-        </div>
+        
         <script>
-       $(function(){
-        $('#b_fund').click(fund);
-    })
-      
+        $(function(){
+            $('#b_fund').click(function(){
+                $("#c_hours").text(fund())
+            });
+        });
         </script>
     </body>
 </html>
